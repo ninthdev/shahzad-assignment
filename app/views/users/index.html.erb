@@ -1,0 +1,28 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Users</h1>
+
+<div id="users">
+  <table>
+    <thead>
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>DOB</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @users.each do |user| %>
+        <tr>
+          <td><%= editable(user, :first_name) %></td>
+          <td><%= editable(user, :last_name) %></td>
+          <td><%= editable(user, :dob, type: 'date') %></td>
+          <td><%= editable(user, :status, type: 'select', options: User.statuses, selected: user.status) %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+
+<%= link_to "New user", new_user_path %>
