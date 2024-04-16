@@ -8,6 +8,7 @@
       <tr>
         <th>First Name</th>
         <th>Last Name</th>
+        <th>Score</th>
         <th>DOB</th>
         <th>Status</th>
       </tr>
@@ -15,10 +16,11 @@
     <tbody>
       <% @users.each do |user| %>
         <tr>
-          <td><%= editable(user, :first_name) %></td>
-          <td><%= editable(user, :last_name) %></td>
-          <td><%= editable(user, :dob, type: 'date') %></td>
-          <td><%= editable(user, :status, type: 'select', options: User.statuses, selected: user.status) %></td>
+          <td><%= best_in_place user, :first_name %></td>
+          <td><%= best_in_place user, :last_name %></td>
+          <td><%= best_in_place user, :score %></td>
+          <td><%= best_in_place user, :dob %></td>
+          <td><%= best_in_place user, :status, as: 'select', collection: User.statuses, selected: user.status %></td>
         </tr>
       <% end %>
     </tbody>

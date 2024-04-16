@@ -74,3 +74,6 @@ group :test do
   gem "selenium-webdriver"
 
 end
+
+gem 'jquery-rails'
+gem "best_in_place", git: "https://github.com/mmotherwell/best_in_place"

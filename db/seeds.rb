@@ -7,6 +7,6 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 
-User.create!(first_name: 'Shahzad', last_name: 'Tariq', dob: '01-01-1989')
-User.create!(first_name: 'Shahroon', last_name: 'Khan', dob: '01-01-1955')
-User.create!(first_name: 'Wasif', last_name: 'Peer', dob: '01-01-1985')
+User.create!(first_name: 'Shahzad', last_name: 'Tariq', score: 24,dob: '01-01-1989', status: 'active')
+User.create!(first_name: 'Shahroon', last_name: 'Khan', score: 77, dob: '01-01-1955', status: 'active')
+User.create!(first_name: 'Wasif', last_name: 'Peer', score: 46, dob: '01-01-1985', status: 'active')
